@@ -6,25 +6,12 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import React, {ReactNode} from 'react';
+import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const App = (): ReactNode => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -32,7 +19,9 @@ const App: () => React$Node = () => {
         <View style={styles.body}>
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Git Test</Text>
-            <Text style={styles.sectionDescription}>Cool !</Text>
+            <Text style={styles.sectionDescription}>
+              Vraiment génial de ouf !
+            </Text>
           </View>
         </View>
       </SafeAreaView>
