@@ -8,6 +8,7 @@ import {
   Text,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import firebase from 'firebase';
 
 const SignIn = (): React.ReactElement => {
   const navigation = useNavigation();
@@ -20,7 +21,11 @@ const SignIn = (): React.ReactElement => {
     setPassword(newPassword);
   };
 
-  const onSignIn = (): void => {};
+  const onSignIn = (): void => {
+    if (email !== '' && password !== '') {
+      firebase.auth().signInWithEmailAndPassword(email, password);
+    }
+  };
   const onSignUp = (): void => {
     navigation.navigate('SignUp');
   };
@@ -28,12 +33,14 @@ const SignIn = (): React.ReactElement => {
   return (
     <View style={styles.container}>
       <TextInput
+        autoCapitalize="none"
         style={styles.textInput}
         onChangeText={onChangeEmail}
         placeholder="E-mail"
         value={email}
       />
       <TextInput
+        autoCapitalize="none"
         style={styles.textInput}
         onChangeText={onChangePassword}
         placeholder="Password"
