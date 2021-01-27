@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const SignIn = (): React.ReactElement => {
+const SignUp = (): React.ReactElement => {
   const navigation = useNavigation();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -20,10 +20,10 @@ const SignIn = (): React.ReactElement => {
     setPassword(newPassword);
   };
 
-  const onSignIn = (): void => {};
-  const onSignUp = (): void => {
-    navigation.navigate('SignUp');
+  const onSignIn = (): void => {
+    navigation.goBack();
   };
+  const onSignUp = (): void => {};
 
   return (
     <View style={styles.container}>
@@ -39,9 +39,9 @@ const SignIn = (): React.ReactElement => {
         placeholder="Password"
         value={password}
       />
-      <Button title="Sign in" onPress={onSignIn} />
-      <TouchableOpacity onPress={onSignUp}>
-        <Text style={styles.navButton}>Sign up</Text>
+      <Button title="Sign up" onPress={onSignUp} />
+      <TouchableOpacity onPress={onSignIn}>
+        <Text style={styles.navButton}>Sign in</Text>
       </TouchableOpacity>
     </View>
   );
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default SignUp;

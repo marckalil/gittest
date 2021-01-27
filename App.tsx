@@ -1,11 +1,14 @@
 import 'react-native-gesture-handler';
 import React, {ReactNode} from 'react';
-import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import firebase from 'firebase';
-import SignIn from './views/SignIn';
+import AuthNavigator from './navigator/AuthNavigator';
+import MainNavigator from './navigator/MainNavigator';
+import Spinner from './components/Spinner';
 
 const App = (): ReactNode => {
+  const [isLoggedIn, setIsLoggedIn] = React.useState<null | boolean>(null);
+
   React.useEffect(() => {
     const firebaseConfig = {
       apiKey: 'AIzaSyBrrQBzbzH5aA9ayAOaErgka9x8sqjwIzI',
@@ -23,10 +26,22 @@ const App = (): ReactNode => {
       firebase.app();
     }
     // firebase.analytics();
-    // firebase.auth().onAuthStateChanged(user => {})
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
   }, []);
 
-  return <SignIn />;
+  return isLoggedIn === null ? (
+    <Spinner />
+  ) : (
+    <NavigationContainer>
+      {isLoggedIn ? <MainNavigator /> : <AuthNavigator />}
+    </NavigationContainer>
+  );
 };
 
 export default App;
