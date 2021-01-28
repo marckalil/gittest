@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import theme from '../constants/theme';
 
 const Home = (): React.ReactElement => {
   const navigation = useNavigation();
@@ -11,6 +12,8 @@ const Home = (): React.ReactElement => {
   return (
     <View style={styles.container}>
       <Text>Welcome !</Text>
+      <Text style={styles.text}>I am a regular text !</Text>
+      <Text style={styles.textBold}>I am a bold text !</Text>
       <TouchableOpacity onPress={openDrawer}>
         <View style={styles.drawerButton} />
       </TouchableOpacity>
@@ -32,6 +35,16 @@ const styles = StyleSheet.create({
     borderColor: 'lightskyblue',
     backgroundColor: 'black',
     marginTop: 40,
+  },
+  text: {
+    marginTop: 20,
+    fontFamily: theme.fontFamily.regular,
+    fontSize: 20,
+  },
+  textBold: {
+    marginTop: 20,
+    fontFamily: theme.fontFamily.bold,
+    fontSize: 20,
   },
 });
 

@@ -9,8 +9,9 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import firebase from 'firebase';
+import theme from '../constants/theme';
 
-const SignIn = (): React.ReactElement => {
+const SignUp = (): React.ReactElement => {
   const navigation = useNavigation();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -22,12 +23,12 @@ const SignIn = (): React.ReactElement => {
   };
 
   const onSignIn = (): void => {
-    if (email !== '' && password !== '') {
-      firebase.auth().signInWithEmailAndPassword(email, password);
-    }
+    navigation.goBack();
   };
   const onSignUp = (): void => {
-    navigation.navigate('SignUp');
+    if (email !== '' && password !== '') {
+      firebase.auth().createUserWithEmailAndPassword(email, password);
+    }
   };
 
   return (
@@ -46,9 +47,9 @@ const SignIn = (): React.ReactElement => {
         placeholder="Password"
         value={password}
       />
-      <Button title="Sign in" onPress={onSignIn} />
-      <TouchableOpacity onPress={onSignUp}>
-        <Text style={styles.navButton}>Sign up</Text>
+      <Button title="Sign up" onPress={onSignUp} />
+      <TouchableOpacity onPress={onSignIn}>
+        <Text style={styles.navButton}>Sign in</Text>
       </TouchableOpacity>
     </View>
   );
@@ -70,9 +71,10 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   navButton: {
-    fontSize: 14,
+    fontFamily: theme.fontFamily.regular,
+    fontSize: 18,
     marginTop: 10,
   },
 });
 
-export default SignIn;
+export default SignUp;

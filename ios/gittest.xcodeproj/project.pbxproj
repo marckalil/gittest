@@ -20,6 +20,11 @@
 		685CC33B44E7DC381A01D250 /* libPods-gittest-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC9C07359F65828899636E3 /* libPods-gittest-tvOS.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A2FA19BFAFCF6728364CAFC7 /* libPods-gittest-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA7D7E8F90A5993DB28B9EE /* libPods-gittest-tvOSTests.a */; };
+		D74DFAAEE0F449D095E9B925 /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F82E39A7222F4DF99E2BAD20 /* DancingScript-Bold.ttf */; };
+		F431D826B82F4B488F903560 /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43E047EA89B945A0AF3C3BF3 /* DancingScript-Medium.ttf */; };
+		B3A20564151B462CA1170A7F /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74B69021A0714A59A60097D3 /* DancingScript-Regular.ttf */; };
+		36920F4D110A4C4BB0766E55 /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 880AFAC542CA4A5AA4C13A1B /* DancingScript-SemiBold.ttf */; };
+		692BA7480029433BB4F0ACEF /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 801F4F5C42CF44D8971CB1E6 /* DancingScript-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F657AA3FA4A453A0E1DA05B2 /* Pods-gittest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gittest-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-gittest-tvOSTests/Pods-gittest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF28D17EF6B040096ADF4D0C /* Pods-gittest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gittest.release.xcconfig"; path = "Target Support Files/Pods-gittest/Pods-gittest.release.xcconfig"; sourceTree = "<group>"; };
+		F82E39A7222F4DF99E2BAD20 /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; name = "DancingScript-Bold.ttf"; path = "../assets/fonts/Dancing_Script/DancingScript-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		43E047EA89B945A0AF3C3BF3 /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; name = "DancingScript-Medium.ttf"; path = "../assets/fonts/Dancing_Script/DancingScript-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		74B69021A0714A59A60097D3 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; name = "DancingScript-Regular.ttf"; path = "../assets/fonts/Dancing_Script/DancingScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		880AFAC542CA4A5AA4C13A1B /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; name = "DancingScript-SemiBold.ttf"; path = "../assets/fonts/Dancing_Script/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		801F4F5C42CF44D8971CB1E6 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "DancingScript-VariableFont_wght.ttf"; path = "../assets/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +175,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E58AC5E8ADE6305168260B77 /* Pods */,
+				203BECCB3D4D4A90B3DD0410 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +208,19 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		203BECCB3D4D4A90B3DD0410 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				F82E39A7222F4DF99E2BAD20 /* DancingScript-Bold.ttf */,
+				43E047EA89B945A0AF3C3BF3 /* DancingScript-Medium.ttf */,
+				74B69021A0714A59A60097D3 /* DancingScript-Regular.ttf */,
+				880AFAC542CA4A5AA4C13A1B /* DancingScript-SemiBold.ttf */,
+				801F4F5C42CF44D8971CB1E6 /* DancingScript-VariableFont_wght.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +366,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D74DFAAEE0F449D095E9B925 /* DancingScript-Bold.ttf in Resources */,
+				F431D826B82F4B488F903560 /* DancingScript-Medium.ttf in Resources */,
+				B3A20564151B462CA1170A7F /* DancingScript-Regular.ttf in Resources */,
+				36920F4D110A4C4BB0766E55 /* DancingScript-SemiBold.ttf in Resources */,
+				692BA7480029433BB4F0ACEF /* DancingScript-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
