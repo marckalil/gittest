@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import firebase from 'firebase';
-import theme from '../constants/theme';
+import theme from 'constants/theme';
 
 const SignUp = (): React.ReactElement => {
   const navigation = useNavigation();

@@ -3,4 +3,4 @@ const fontFamily = {
   bold: 'DancingScript-Bold',
 };
 
-export default {fontFamily};
+export default { fontFamily };

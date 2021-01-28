@@ -4,12 +4,21 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "jsx": "react",
+    "jsx": "react-native",
     "lib": ["es6"],
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": "./",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "navigator/*": ["src/navigator/*"],
+      "views/*": ["src/views/*"],
+    }
   },
   "exclude": [
     "node_modules",

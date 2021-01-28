@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';
-import React, {ReactNode} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import React, { ReactNode } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import firebase from 'firebase';
-import AuthNavigator from './navigator/AuthNavigator';
-import MainNavigator from './navigator/MainNavigator';
-import Spinner from './components/Spinner';
+import AuthNavigator from 'navigator/AuthNavigator';
+import MainNavigator from 'navigator/MainNavigator';
+import Spinner from 'components/Spinner';
 
 const App = (): ReactNode => {
   const [isLoggedIn, setIsLoggedIn] = React.useState<null | boolean>(null);

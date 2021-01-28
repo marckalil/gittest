@@ -7,14 +7,14 @@ import {
   createDrawerNavigator,
 } from '@react-navigation/drawer';
 import firebase from 'firebase';
-import Home from '../views/Home';
+import Home from 'views/Home';
 
 const MainNavigator = (): React.ReactElement => {
   const onSignOut = (): void => {
     firebase.auth().signOut();
   };
 
-  const {Navigator, Screen} = createDrawerNavigator();
+  const { Navigator, Screen } = createDrawerNavigator();
   const NavigatorContent = (
     props: DrawerContentComponentProps,
   ): React.ReactElement => (
@@ -27,7 +27,6 @@ const MainNavigator = (): React.ReactElement => {
   return (
     <Navigator drawerContent={NavigatorContent}>
       <Screen name="Home" component={Home} />
-      {/* <DrawerItem label="Sign out" onPress={firebase.auth().signOut} /> */}
     </Navigator>
   );
 };
