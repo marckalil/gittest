@@ -1,6 +1,6 @@
 import React from 'react';
-// import {createStackNavigator} from '@react-navigation/stack';
 import {
+  DrawerNavigationProp,
   DrawerContentScrollView,
   DrawerContentComponentProps,
   DrawerItem,
@@ -9,12 +9,20 @@ import {
 import firebase from 'firebase';
 import Home from 'views/Home';
 
+type MainNavigatorParamList = {
+  Home: undefined;
+};
+export type HomeScreenNavigationProps = DrawerNavigationProp<
+  MainNavigatorParamList,
+  'Home'
+>;
+
 const MainNavigator = (): React.ReactElement => {
   const onSignOut = (): void => {
     firebase.auth().signOut();
   };
 
-  const { Navigator, Screen } = createDrawerNavigator();
+  const { Navigator, Screen } = createDrawerNavigator<MainNavigatorParamList>();
   const NavigatorContent = (
     props: DrawerContentComponentProps,
   ): React.ReactElement => (

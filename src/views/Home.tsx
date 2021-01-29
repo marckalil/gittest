@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { HomeScreenNavigationProps } from 'navigator/MainNavigator';
 import theme from 'constants/theme';
 
 const Home = (): React.ReactElement => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<HomeScreenNavigationProps>();
   const openDrawer = (): void => {
     navigation.openDrawer();
   };
